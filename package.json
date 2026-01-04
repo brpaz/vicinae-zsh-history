@@ -1,0 +1,55 @@
+{
+  "$schema": "https://raw.githubusercontent.com/vicinaehq/vicinae/refs/heads/main/extra/schemas/extension.json",
+  "name": "zsh-history",
+  "title": "ZSH History",
+  "description": "Browse and paste commands from ZSH history",
+  "categories": [
+    "System"
+  ],
+  "license": "MIT",
+  "author": "brpaz",
+  "icon": "icon.png",
+  "scripts": {
+    "build": "vici build",
+    "dev": "vici develop",
+    "lint": "biome check src/ && vici lint",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
+    "format:check": "biome format .",
+    "typecheck": "tsc --noEmit",
+    "check": "biome check"
+  },
+  "keywords": [
+    "zsh",
+    "history",
+    "shell",
+    "terminal",
+    "commands"
+  ],
+  "preferences": [
+    {
+      "name": "historyFilePath",
+      "type": "textfield",
+      "title": "History File Path",
+      "description": "Path to your ZSH history file",
+      "default": "~/.zsh_history",
+      "required": true
+    }
+  ],
+  "commands": [
+    {
+      "name": "list-command",
+      "title": "Browse ZSH History",
+      "description": "Browse and use commands from ZSH history",
+      "mode": "view"
+    }
+  ],
+  "dependencies": {
+    "@vicinae/api": "^0.18.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.3.10",
+    "@types/react": "^19.2.7",
+    "typescript": "^5.9.3"
+  }
+}
