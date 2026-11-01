@@ -20,14 +20,17 @@ Browse and paste commands from your ZSH history directly into any application.
 
 1. Clone or download this extension to your local machine
 2. Navigate to the extension directory:
+
    ```bash
    cd vicinae-zsh-history
    ```
 3. Install dependencies:
+
    ```bash
    npm install
    ```
 4. Build the extension:
+
    ```bash
    npm run build
    ```
@@ -85,6 +88,7 @@ The path supports tilde (`~`) expansion for your home directory.
 The extension handles both ZSH history formats:
 
 ### Extended Format (Default)
+
 ```
 : 1704446400:0;ls -la
 : 1704446405:0;cd /home/user
@@ -92,6 +96,7 @@ The extension handles both ZSH history formats:
 ```
 
 ### Simple Format
+
 ```
 ls -la
 cd /home/user
